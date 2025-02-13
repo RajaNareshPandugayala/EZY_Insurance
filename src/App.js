@@ -42,7 +42,7 @@ function App() {
   return (
     <div className="App">
       {/* <BrowserRouter basename="/EZY_Mortgage"> */}
-      <BrowserRouter basename="/EZY_Insurance">
+      <BrowserRouter basename="/EZY_Insurance/">
         <ScrollToTop />
         <Header />
         <Routes>
