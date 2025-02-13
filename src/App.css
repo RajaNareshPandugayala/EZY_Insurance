@@ -1,0 +1,1532 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+body {
+  margin-top: 80px;
+}
+
+.hidden {
+  display: none;
+}
+
+.error {
+  color: red;
+  text-shadow: 0px 0px 2px red;
+  background-color: white;
+  border-radius: 0.5cm;
+  padding: 3px 5px;
+}
+
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+form.loading {
+  cursor: wait;
+}
+
+form.loading * {
+  pointer-events: none;
+}
+
+form.submitting {
+  cursor: wait;
+}
+
+form.submitting * {
+  pointer-events: none;
+  cursor: wait;
+}
+
+
+.shushankTechLink {
+  color: #8a8181;
+  text-decoration: none;
+}
+
+.historically_aTag {
+  color: white;
+  text-decoration: none;
+}
+
+.reHistoricalContentBoxButton:hover>.historically_aTag {
+  color: #3113ca;
+}
+
+/******************************Header-Start***********************************/
+/******************************Header-Start***********************************/
+
+.headerParent {
+  background-color: white;
+  box-shadow: 0px 0px 2px 0px gray;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  z-index: 1000;
+  background-color: #c1d2d9;
+  background-color: darkblue;
+}
+
+.headerBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1150px;
+  /* padding: 5px 0px; */
+}
+
+.headerLogo {
+  width: 200px;
+  width: 85px;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 5px 0px;
+  background-color: white;
+  box-shadow: 2px 2px 5px gray;
+}
+
+.headerMenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  gap: 25px;
+}
+
+.headerMenuMobileView {
+  display: none;
+}
+
+.headerMenuUI {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  background-color: #c1d2d9;
+  background-color: darkblue;
+}
+
+.headerMenuUI_LI {
+  position: absolute;
+  display: none;
+  background-color: white;
+  padding: 10px;
+}
+
+.headerMenuUI li {
+  padding: 10px;
+}
+
+.headerMenuUI li a {
+  text-decoration: none;
+  color: black;
+}
+
+.headerMenuUI_Header {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+
+}
+
+.headerMenuUI_Header:hover,
+.headerMenuUI li a:hover {
+  cursor: pointer;
+  color: #3113ca;
+  border-bottom: 3px solid #3113ca;
+}
+
+.headerMenuUI_Header:active,
+.headerMenuUI li a:active {
+  cursor: pointer;
+  color: #ef5a26;
+  border-bottom: 3px solid #ef5a26;
+}
+
+
+.headerMenuUI:hover>.headerMenuUI_LI {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  margin-top: 20px;
+  margin-left: -20px;
+  border-radius: 0.1cm;
+}
+
+.headerMenu_Tel {
+  text-decoration: none;
+  color: black;
+}
+
+.headerMenu_Tel:hover {
+  color: darkblue;
+}
+
+
+.headerMenuButton {
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #3113ca;
+  color: white;
+  border: 1px solid #3113ca;
+  border-radius: 0.5cm;
+  box-shadow: 0px 0px 15px 0px gray;
+  transition: transform 0.2s ease;
+}
+
+.headerMenuButton:hover {
+  animation: moveGradient 0.25s linear;
+  transform: translateY(-3px);
+}
+
+.headerMenuButtonLink {
+  color: white;
+  text-decoration: none;
+  background-color: #3113ca;
+  color: white;
+  border: 1px solid #3113ca;
+  border-radius: 0.5cm;
+  padding: 10px 15px;
+}
+
+.headerMenuButton:hover>.headerMenuButtonLink {
+  color: #3113ca;
+}
+
+.headerMenuButton:active>.headerMenuButtonLink {
+  color: white;
+}
+
+.headerMenuButtonLink:hover {
+  /* padding: 10px 15px; */
+  font-size: 16px;
+  font-weight: bold;
+  background-color: white;
+  color: #3113ca;
+  border: 1px solid white;
+  border-radius: 0.5cm;
+  cursor: pointer;
+}
+
+.headerMenuButtonLink:active {
+  background-color: #ef5a26;
+  color: white;
+}
+
+/******************************Header-End***********************************/
+
+/******************************Footer-Start***********************************/
+
+.footerParent {
+  background-color: #c1d2d9;
+  color: black;
+  box-shadow: 0px 0px 2px 0px gray;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: relative;
+  z-index: 999;
+}
+
+.footerBox {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  width: 1150px;
+  padding: 60px 0px 50px 0px;
+  gap: 30px;
+}
+
+.footerLogo {
+  width: 80px;
+  border-radius: 50%;
+  padding: 5px 0px;
+  background-color: white;
+  box-shadow: 2px 2px 5px gray;
+  /* box-shadow: 1px 1px 5px 0px white; */
+}
+
+.footerTop {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 70px;
+  /* width: 100%; */
+}
+
+.footerTopDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footerTopDiv01 {
+  width: 225px;
+}
+
+.footerTopDiv00 {
+  gap: 10px;
+}
+
+.footerTopDivHeading {
+  font-size: 23px;
+}
+
+
+.footerTopDivContent {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+
+.footerTopDivContent00 {
+  text-align: justify;
+  line-height: 26px;
+}
+
+.footerTopDivContentSM {
+  flex-direction: row;
+  gap: 10px;
+  font-size: 35px;
+}
+
+.footerTopDivContentIcon {
+  display: flex;
+  gap: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.LoanOption,
+.Resource,
+.Resource Link {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.LoanOption:hover,
+.Resource:hover,
+.Resource Link:hover {
+  text-decoration: underline;
+}
+
+
+
+.footerMiddle {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+  gap: 10px;
+  padding-top: 20px;
+  font-size: 15px;
+}
+
+.houseIcon {
+  width: 35px;
+  color: black;
+}
+
+
+.footerBottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  gap: 20px;
+}
+
+.footerBottomDown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #707070;
+}
+
+.footerBottomDown02 {
+  font-size: 11px;
+}
+
+.footerBottomDown02 b {
+  color: #6a6a6a;
+}
+
+.footerBottomDown02 b:hover {
+  cursor: pointer;
+}
+
+.goTop {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  border: 2px solid #b3b3b3;
+  color: #b3b3b3;
+  padding: 7px 35px;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 999;
+  transition: transform 0.2s ease;
+}
+
+.goTop:hover {
+  transform: translateY(-3px);
+}
+
+.WhatApp {
+  position: fixed;
+  right: 50px;
+  bottom: 80px;
+  border: 2px solid #b3b3b3;
+  border-radius: 50%;
+  color: #b3b3b3;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.WhatApp:hover {
+  transform: translateY(-3px);
+}
+
+.whatappIcon {
+  width: 60px;
+}
+
+
+
+/******************************Footer-End***********************************/
+
+
+/****************************************************************************
+**********************************Home-Start*********************************
+*****************************************************************************/
+
+.homeParent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/********************************CoverPage-Start*********************************/
+
+.homeCoverPageParent {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeCoverPageBox {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeCoverPageBoxdot {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  position: absolute;
+  top: 90vh;
+}
+
+.homeCoverPageBoxdot span {
+  border-radius: 50%;
+  padding: 3px;
+  cursor: pointer;
+  background-color: #3113ca;
+  border: 2px solid #3113ca;
+  box-shadow: 0px 0px 3px 1px white;
+}
+
+.homeCoverPageBoxdot span:hover {
+  border: 2px solid white;
+}
+
+
+.homeCoverPageBoxArrow {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 35px;
+  position: absolute;
+  top: 45vh;
+}
+
+.homeCoverPageBoxLeftArrow,
+.homeCoverPageBoxRightArrow {
+  font-size: 35px;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+}
+
+.homeCoverPageBoxLeftArrow:hover,
+.homeCoverPageBoxRightArrow:hover {
+  color: #ef5a26;
+}
+
+.homeCoverPageBoxLeftArrow:active,
+.homeCoverPageBoxRightArrow:active {
+  color: #3113ca;
+}
+
+
+.homeCoverPage_text {
+  width: 1150px;
+  font-size: 40px;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px black;
+  color: white;
+}
+
+.homeCoverPage_Business {
+  background: linear-gradient(270deg, transparent 35%, #0441aa),
+    url(./PicesForPages/business_insurance.jpg);
+}
+
+.homeCoverPage_AllInOne {
+  background: linear-gradient(270deg, transparent 35%, #0441aa),
+    url(./PicesForPages/insurance_for_all.png);
+}
+
+.homeCoverPage_Auto {
+  background: linear-gradient(270deg, transparent 35%, #0441aa),
+    url(./PicesForPages/auto_insurance.png);
+}
+
+.homeCoverPage_Homeowner {
+  background: linear-gradient(270deg, transparent 35%, #0441aa),
+    url(./PicesForPages/homeowner_insurance1024x512.jpg);
+}
+
+.homeCoverPage_LandlordTenant {
+  background: linear-gradient(270deg, transparent 35%, #0441aa),
+    url(./PicesForPages/landlord_tenant_insurance.jpg);
+}
+
+.homeCoverPage_Life {
+  background: linear-gradient(270deg, transparent 35%, #0441aa),
+    url(./PicesForPages/life_insurance84087292.png);
+}
+
+.homeCoverPage_Speciality {
+  background: linear-gradient(270deg, transparent 35%, #0441aa),
+    url(./PicesForPages/speciality_insurance.png);
+}
+
+.homeCoverPage_Images {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 90vh;
+  border-bottom-right-radius: 15%;
+  border-bottom-left-radius: 15%;
+  box-shadow: 1px 1px 20px 10px gray;
+}
+
+
+
+
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-10%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(8%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    /* transform: scale(0.5); */
+    opacity: 0;
+  }
+
+  to {
+    /* transform: scale(1); */
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  from {
+    transform: scale(-1.1);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes flipIn {
+  from {
+    transform: rotateY(360deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: rotateY(0);
+    opacity: 1;
+  }
+}
+
+/* @keyframes rotateIn {
+  from {
+    transform: rotate(-10deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: rotate(0);
+    opacity: 1;
+  }
+} */
+
+@keyframes slideInUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Assign different animations */
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.slide-in-left {
+  animation: slideInLeft 1.5s ease-in-out;
+}
+
+.slide-in-right {
+  animation: slideInRight 1.5s ease-in-out;
+}
+
+.zoom-in {
+  animation: zoomIn 1.5s ease-in-out;
+}
+
+.bounce-in {
+  animation: bounceIn 1.5s ease-in-out;
+}
+
+.flip-in {
+  animation: flipIn 1.5s ease-in-out;
+}
+
+/* .rotate-in {
+  animation: rotateIn 1.5s ease-in-out;
+} */
+
+.slide-in-up {
+  animation: slideInUp 1.5s ease-in-out;
+}
+
+/********************************CoverPage-End*********************************/
+
+/********************************InsurancePolicy-Start*********************************/
+
+.homeInsurancePolicyPageParent {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(300deg, transparent, #e2eafb, transparent, #e2eafb, transparent);
+}
+
+.homeInsurancePolicyPageBox {
+  width: 1150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 100px 0px;
+}
+
+.insurancePolicyImage {
+  width: 600px;
+  border-radius: 0.1cm;
+  box-shadow: 1px 1px 30px 10px gray;
+}
+
+.homeInsurancePolicyPageText {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 15px;
+  font-family: var(--e-global-typography-primary-font-family), Sans-serif;
+  font-weight: var(--e-global-typography-primary-font-weight);
+  text-shadow: 1px 1px 3px gray;
+}
+
+.homeInsurancePolicyPageText_Header {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.homeInsurancePolicyPageText_Content {
+  font-size: 24px;
+}
+
+.homeInsurancePolicyPageText_Button {
+  border-radius: 5px;
+  border: 2px solid #ef5a26;
+  background-color: #ef5a26;
+  color: white;
+  font-weight: bold;
+  padding: 13px 10px;
+  box-shadow: 1px 1px 10px 3px gray;
+}
+
+
+.homeInsurancePolicyPageText_Button:hover {
+  animation: moveGradient 0.25s linear;
+  transform: translateY(-3px);
+  cursor: pointer;
+  color: #c9ebff;
+}
+
+.homeInsurancePolicyPageText_Button:active {
+  border: 2px solid #3113ca;
+  background-color: #3113ca;
+  color: white;
+  font-weight: bold;
+  padding: 13px 10px;
+}
+
+/********************************InsurancePolicy-End*********************************/
+
+/********************************WorkTogether-Start*********************************/
+.homeFutureInspiringPageParent {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.homeFutureInspiringPageBox {
+  width: 1150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px 0px;
+}
+
+.homeFutureInspiringPageTitel {
+  color: #ef5a26;
+  font-weight: bold;
+  font-size: 22px;
+  text-shadow: 1px 1px 1px black;
+}
+
+.homeFutureInspiringPageHeading {
+  width: 500px;
+  font-weight: bold;
+  font-size: 44px;
+  text-shadow: 1px 1px 1px black;
+  text-align: center;
+}
+
+.homeFutureInspiringPageInsuranceDivBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.homeFutureInspiringPageInsuranceDiv {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  border-radius: 0.25cm;
+  border: 3px solid transparent;
+  padding: 30px 0px;
+  background: linear-gradient(200deg, transparent, #f7eded, transparent, #f7eded, transparent);
+  box-shadow: 1px 1px 10px 3px gray;
+  transition: border 0.3s ease-in-out;
+}
+
+
+
+.FutureInspiringPageDiv_Business {
+  border-top: 5px solid red;
+}
+
+.FutureInspiringPageDiv_Business:hover {
+  border: 3px solid red;
+  border-top: 5px solid red;
+}
+
+.FutureInspiringPageDiv_Life {
+  border-top: 5px solid blue;
+}
+
+.FutureInspiringPageDiv_Life:hover {
+  border: 3px solid blue;
+  border-top: 5px solid blue;
+}
+
+.FutureInspiringPageDiv_LandlordTenant {
+  border-top: 5px solid green;
+}
+
+.FutureInspiringPageDiv_LandlordTenant:hover {
+  border: 3px solid green;
+  border-top: 5px solid green;
+}
+
+.FutureInspiringPageDiv_Speciality {
+  border-top: 5px solid #a90196;
+}
+
+.FutureInspiringPageDiv_Speciality:hover {
+  border: 3px solid #a90196;
+  border-top: 5px solid #a90196;
+}
+
+.FutureInspiringPageDiv_Homeowner {
+  border-top: 5px solid #0193a9;
+}
+
+.FutureInspiringPageDiv_Homeowner:hover {
+  border: 3px solid #0193a9;
+  border-top: 5px solid #0193a9;
+}
+
+
+.FutureInspiringPageDiv_Auto {
+  border-top: 5px solid #5d5d5d;
+}
+
+.FutureInspiringPageDiv_Auto:hover {
+  border: 3px solid #5d5d5d;
+  border-top: 5px solid #5d5d5d;
+}
+
+
+.futureInsupiringImagesBox {
+  overflow: hidden;
+  width: 90%;
+  height: 160px;
+  box-shadow: 1px 1px 5px 2px gray;
+  border-radius: 0.2cm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeFutureInspiringPageInsuranceDivImage {
+  width: 100%;
+}
+
+.homeFutureInspiringPageInsuranceDivText {
+  font-size: 22px;
+  font-weight: bold;
+  text-shadow: 0px 0px 2px #3113ca;
+}
+
+.homeFutureInspiringPageInsuranceDivButton {
+  border: 1px solid #ef5a26;
+  padding: 13px 20px;
+  border-radius: 0.1cm;
+  font-weight: bold;
+  background-color: #ef5a26;
+  color: white;
+  cursor: pointer;
+}
+
+.homeFutureInspiringPageInsuranceDivButton:hover {
+  animation: moveGradient 0.25s linear;
+  transform: translateY(-3px);
+  cursor: pointer;
+  color: #c9ebff;
+}
+
+.homeFutureInspiringPageInsuranceDivButton:active {
+  border: 1px solid #3113ca;
+  background-color: #3113ca;
+  color: white;
+}
+
+
+@keyframes vibrate {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(-1px, 1px);
+  }
+
+  40% {
+    transform: translate(1px, -1px);
+  }
+
+  60% {
+    transform: translate(-2px, -2px);
+  }
+
+  80% {
+    transform: translate(1px, 1px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+.homeFutureInspiringPageInsuranceDiv:hover .futureInsupiringImagesBox {
+  animation: vibrate 0.05s linear infinite;
+}
+
+
+/********************************WorkTogether-End*********************************/
+
+
+/********************************FindAgent-Start*********************************/
+
+.homeFindAgentPageParent {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(300deg, transparent, #e2eafb, transparent, #e2eafb, transparent);
+}
+
+.homeFindAgentPageBox {
+  width: 1150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 100px 0px;
+}
+
+.homeFindAgentPage_Header {
+  font-size: 40px;
+  width: 650px;
+  font-weight: bold;
+  text-align: center;
+  color: darkblue;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px darkblue;
+}
+
+.homeFindAgentPage_ContactBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeFindAgentPage_ContactSpan {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  border: 3px solid darkblue;
+  background-color: darkblue;
+  color: white;
+  width: 450px;
+  gap: 30px;
+  padding: 70px 30px;
+  border-radius: 0.25cm;
+  box-shadow: 2px 2px 10px 3px gray;
+  margin: 0px -20px;
+}
+
+.homeFindAgentPage_ContactIcon {
+  font-size: 44px;
+}
+
+.homeFindAgentPage_ContactTextDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-weight: bold;
+}
+
+.homeFindAgentPage_ContactUs {
+  font-size: 30px;
+}
+
+.homeFindAgentPage_OrTextSpan {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40%;
+  background-color: white;
+  z-index: 100;
+  box-shadow: 1px 1px 5px 2px gray;
+}
+
+.homeFindAgentPage_OrText {
+  padding: 15px 10px 40px 10px;
+  border: 1px dashed darkblue;
+  border-radius: 40%;
+  font-weight: bold;
+  font-size: 20px;
+  color: darkblue;
+
+}
+
+/********************************FindAgent-End*********************************/
+
+/*********************TeamMemberFullDetails-Start********************************/
+
+.teamBoxParent {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  z-index: 950;
+}
+
+.teamBox {
+  width: 1150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0px;
+  gap: 20px;
+  color: gray;
+}
+
+.teamHeading {
+  font-size: 40px;
+  color: #3113ca;
+  padding: 15px;
+  font-weight: bold;
+}
+
+.teamListBoxParent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding-bottom: 50px;
+}
+
+.teamListBox {
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.15cm;
+  border: 1px solid white;
+  background-color: white;
+  box-shadow: 1px 1px 15px 0px gray;
+  padding: 20px;
+}
+
+.teamListSpanImage {
+  width: 250px;
+  height: 280px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.15cm;
+}
+
+.teamListSpanImage img {
+  width: 250px;
+  height: 280px;
+  transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+}
+
+.teamListNameOfficer {
+  position: absolute;
+  margin-bottom: -240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+  background-color: white;
+  padding: 20px;
+  width: 260px;
+  border-radius: 0.15cm;
+}
+
+.teamListName {
+  font-weight: bold;
+  color: red;
+  font-size: 18px;
+}
+
+.teamListName:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+
+.teamListBox:hover>.teamListSpanImage img {
+  width: 270px;
+  height: 300px;
+}
+
+.teamListOfficer {
+  font-size: 15px;
+}
+
+
+
+.ourTeamMemberTopParent {
+  position: relative;
+  /* Needed to position children absolutely */
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  /* Prevent overflow from video */
+  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.ourTeamMemberTopBGImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  min-width: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+
+.ourTeamMemberTopBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 100px;
+  color: white;
+  background-color: #00000080;
+  text-shadow: 0px 1px 4px black;
+  line-height: 22px;
+
+  position: relative;
+  z-index: 1;
+}
+
+.ourTeamMemberTopLeftSide {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  gap: 20px;
+}
+
+.ourTeamMemberTopLeftSideSpanImage {
+  width: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 10px 0px black;
+}
+
+.ourTeamMemberTopLeftSideSpanImage img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.ourTeamMemberTopRightSide {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  height: 200px;
+}
+
+.ourTeamMemberTopLeftSideName {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.ourTeamMemberTopRightSide span b {
+  text-transform: uppercase;
+}
+
+
+
+
+.ourTeamMemberBottomParent {
+  margin-top: -40px;
+}
+
+
+
+
+
+
+
+.FreeQuoteFormParent {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00000080;
+  z-index: 1000;
+}
+
+.FreeQuoteFormBox {
+  width: 550px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  padding: 20px 0px;
+}
+
+.FreeQuoteBox {
+  width: 100%;
+  padding: 50px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 1px 1px 15px 0px black;
+}
+
+.FreeQuoteFormCloseButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.FreeQuoteFormCloseButton span {
+  background-color: black;
+  padding: 10px 13px;
+  border-radius: 50%;
+  margin-top: 2px;
+  margin-left: -40px;
+  box-shadow: 0px 0px 5px 0px gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.purchaseBottomParent {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.purchaseBottomBox {
+  width: 1150px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 50px 0px;
+  gap: 30px;
+}
+
+
+.purchaseBottomLeftBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  /* padding-left: 20px; */
+}
+
+.purchaseBottomLeftContent {
+  text-align: justify;
+  color: gray;
+  line-height: 23px;
+}
+
+.purchaseBottomLeftContentBold {
+  font-weight: bold;
+  color: black;
+}
+
+
+.purchaseBottomLeftHeader {
+  font-size: 34px;
+}
+
+.purchaseBottomLeftUL {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-weight: bold;
+  line-height: 22px;
+}
+
+.purchaseBottomLeftULLink {
+  text-decoration: none;
+  color: #ef5a26;
+}
+
+.purchaseBottomLeftULLink:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+.purchaseBottomLeftButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+.purchaseBottomLeftButtonLink {
+  border: 1px solid#ef5a26;
+  border-radius: 5px;
+  color: #ef5a26;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 15px 50px;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.purchaseBottomLeftButtonLink:hover {
+  color: white;
+  background-color: #ef5a26;
+  text-decoration: underline;
+  cursor: pointer;
+  transform: translateY(-3px);
+}
+
+
+.purchaseBottomLeftButtonLink00 {
+  border: 1px solid blue;
+  border-radius: 5px;
+  color: blue;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 15px 50px;
+  text-decoration: none;
+}
+
+.purchaseBottomLeftButtonLink00:hover {
+  color: white;
+  background-color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+
+.purchaseBottomRightBox {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.purchaseBottomRightHeading {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.purchaseBottomRightContent {
+  color: gray;
+  line-height: 22px;
+}
+
+.purchaseBottomRightform {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.purchaseBottomRightform select,
+.purchaseBottomRightform input,
+.purchaseBottomRightform textarea {
+  padding: 20px 15px;
+  font-size: 11px;
+  font-weight: bold;
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  outline: none;
+}
+
+.purchaseBottomRightform select {
+  cursor: pointer;
+}
+
+.purchaseBottomRightform select:focus,
+.purchaseBottomRightform input:focus,
+.purchaseBottomRightform textarea:focus {
+  border-top: 1px solid #c2c2c2;
+  border-bottom: 1px solid #c2c2c2;
+}
+
+
+.purchaseBottomRightform button {
+  padding: 15px;
+  font-size: 11px;
+  font-weight: bold;
+  background-color: #ef5a26;
+  border: 1px solid #ef5a26;
+  border-radius: 5px;
+  color: white;
+  transition: transform 0.2s ease;
+}
+
+.purchaseBottomRightform button:hover {
+  background-color: #127fc3;
+  border: 1px solid #127fc3;
+  cursor: pointer;
+  transform: translateY(-3px);
+}
