@@ -633,6 +633,7 @@ form.submitting * {
 .homeCoverPage_blank {
   font-size: 20px;
   color: transparent;
+  text-shadow: 0px 0px 0px transparent;
 }
 
 
