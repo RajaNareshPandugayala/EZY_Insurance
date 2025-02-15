@@ -610,7 +610,6 @@ form.submitting * {
 .homeCoverPage_content {
   width: 1150px;
   color: white;
-  text-shadow: 1px 1px 10px black;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -620,6 +619,7 @@ form.submitting * {
   width: 50%;
   font-size: 25px;
   text-align: justify;
+  text-shadow: 1px 1px 10px black;
 }
 
 .homeCoverPage_benefits {
@@ -628,12 +628,12 @@ form.submitting * {
   flex-direction: column;
   gap: 10px;
   font-size: 18px;
+  text-shadow: 1px 1px 10px black;
 }
 
 .homeCoverPage_blank {
   font-size: 20px;
   color: transparent;
-  text-shadow: 0px 0px 0px transparent;
 }
 
 
