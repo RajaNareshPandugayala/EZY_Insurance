@@ -546,13 +546,6 @@ form.submitting * {
 }
 
 
-.homeCoverPage_text {
-  width: 1150px;
-  font-size: 40px;
-  font-weight: bold;
-  text-shadow: 1px 1px 5px black;
-  color: white;
-}
 
 .homeCoverPage_Business {
   background: linear-gradient(270deg, transparent 35%, #0441aa),
@@ -594,6 +587,7 @@ form.submitting * {
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -601,9 +595,45 @@ form.submitting * {
   border-bottom-right-radius: 15%;
   border-bottom-left-radius: 15%;
   box-shadow: 1px 1px 20px 10px gray;
+  gap: 50px;
 }
 
 
+.homeCoverPage_text {
+  width: 1150px;
+  font-size: 40px;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px black;
+  color: white;
+}
+
+.homeCoverPage_content {
+  width: 1150px;
+  color: white;
+  text-shadow: 1px 1px 10px black;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.homeCoverPage_description {
+  width: 50%;
+  font-size: 25px;
+  text-align: justify;
+}
+
+.homeCoverPage_benefits {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 18px;
+}
+
+.homeCoverPage_blank {
+  font-size: 20px;
+  color: transparent;
+}
 
 
 
@@ -710,36 +740,162 @@ form.submitting * {
 
 /* Assign different animations */
 .fade-in {
-  animation: fadeIn 1.5s ease-in-out;
+  opacity: 0;
+  /* Initially hidden */
+  animation: fadeIn 0.5s ease-in-out 1.5s forwards;
 }
 
 .slide-in-left {
-  animation: slideInLeft 1.5s ease-in-out;
+  opacity: 0;
+  animation: slideInLeft 0.5s ease-in-out 1.5s forwards;
 }
 
 .slide-in-right {
-  animation: slideInRight 1.5s ease-in-out;
+  opacity: 0;
+  animation: slideInRight 0.5s ease-in-out 1.5s forwards;
 }
 
 .zoom-in {
-  animation: zoomIn 1.5s ease-in-out;
+  opacity: 0;
+  animation: zoomIn 0.5s ease-in-out 1.5s forwards;
 }
 
 .bounce-in {
-  animation: bounceIn 1.5s ease-in-out;
+  opacity: 0;
+  animation: bounceIn 0.5s ease-in-out 1.5s forwards;
 }
 
 .flip-in {
-  animation: flipIn 1.5s ease-in-out;
+  opacity: 0;
+  animation: flipIn 0.5s ease-in-out 1.5s forwards;
 }
+
 
 /* .rotate-in {
   animation: rotateIn 1.5s ease-in-out;
 } */
 
 .slide-in-up {
-  animation: slideInUp 1.5s ease-in-out;
+  opacity: 0;
+  animation: slideInUp 0.5s ease-in-out 1.5s forwards;
 }
+
+
+
+.fade-in2 {
+  opacity: 0;
+  /* Initially hidden */
+  animation: fadeIn 1.75s ease-in-out 2.75s forwards;
+}
+
+.slide-in-left2 {
+  opacity: 0;
+  animation: slideInLeft 1.75s ease-in-out 2.75s forwards;
+}
+
+.slide-in-right2 {
+  opacity: 0;
+  animation: slideInRight 1.75s ease-in-out 2.75s forwards;
+}
+
+.zoom-in2 {
+  opacity: 0;
+  animation: zoomIn 1.75s ease-in-out 2.75s forwards;
+}
+
+.bounce-in2 {
+  opacity: 0;
+  animation: bounceIn 1.75s ease-in-out 2.75s forwards;
+}
+
+.flip-in2 {
+  opacity: 0;
+  animation: flipIn 1.75s ease-in-out 2.75s forwards;
+}
+
+
+.slide-in-up2 {
+  opacity: 0;
+  animation: slideInUp 1.75s ease-in-out 2.75s forwards;
+}
+
+
+
+.fade-in3 {
+  opacity: 0;
+  /* Initially hidden */
+  animation: fadeIn 3s ease-in-out 4s forwards;
+}
+
+.slide-in-left3 {
+  opacity: 0;
+  animation: slideInLeft 3s ease-in-out 4s forwards;
+}
+
+.slide-in-right3 {
+  opacity: 0;
+  animation: slideInRight 3s ease-in-out 4s forwards;
+}
+
+.zoom-in3 {
+  opacity: 0;
+  animation: zoomIn 3s ease-in-out 4s forwards;
+}
+
+.bounce-in3 {
+  opacity: 0;
+  animation: bounceIn 3s ease-in-out 4s forwards;
+}
+
+.flip-in3 {
+  opacity: 0;
+  animation: flipIn 3s ease-in-out 4s forwards;
+}
+
+.slide-in-up3 {
+  opacity: 0;
+  animation: slideInUp 3s ease-in-out 4s forwards;
+}
+
+
+
+.fade-in1 {
+  opacity: 0;
+  /* Initially hidden */
+  animation: fadeIn 4.5s ease-in-out 6.5s forwards;
+}
+
+.slide-in-left1 {
+  opacity: 0;
+  animation: slideInLeft 4.5s ease-in-out 6.5s forwards;
+}
+
+.slide-in-right1 {
+  opacity: 0;
+  animation: slideInRight 4.5s ease-in-out 6.5s forwards;
+}
+
+.zoom-in1 {
+  opacity: 0;
+  animation: zoomIn 4.5s ease-in-out 6.5s forwards;
+}
+
+.bounce-in1 {
+  opacity: 0;
+  animation: bounceIn 4.5s ease-in-out 6.5s forwards;
+}
+
+.flip-in1 {
+  opacity: 0;
+  animation: flipIn 4.5s ease-in-out 6.5s forwards;
+}
+
+.slide-in-up1 {
+  opacity: 0;
+  animation: slideInUp 4.5s ease-in-out 6.5s forwards;
+}
+
+
 
 /********************************CoverPage-End*********************************/
 
