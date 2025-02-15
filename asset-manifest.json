@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/EZY_Insurance/static/css/main.03347be1.css",
+    "main.css": "/EZY_Insurance/static/css/main.92ff7329.css",
     "main.js": "/EZY_Insurance/static/js/main.90197427.js",
     "static/js/488.8696556b.chunk.js": "/EZY_Insurance/static/js/488.8696556b.chunk.js",
     "static/media/life_insurance84087292.png": "/EZY_Insurance/static/media/life_insurance84087292.7dcf58c6fcc394acb68c.png",
@@ -23,12 +23,12 @@
     "static/media/SriAnnapareddy.webp": "/EZY_Insurance/static/media/SriAnnapareddy.f5a2f8cda3ea0d0349b7.webp",
     "static/media/blank.jpg": "/EZY_Insurance/static/media/blank.d8615a0b31fd3f9e8f0a.jpg",
     "index.html": "/EZY_Insurance/index.html",
-    "main.03347be1.css.map": "/EZY_Insurance/static/css/main.03347be1.css.map",
+    "main.92ff7329.css.map": "/EZY_Insurance/static/css/main.92ff7329.css.map",
     "main.90197427.js.map": "/EZY_Insurance/static/js/main.90197427.js.map",
     "488.8696556b.chunk.js.map": "/EZY_Insurance/static/js/488.8696556b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.03347be1.css",
+    "static/css/main.92ff7329.css",
     "static/js/main.90197427.js"
   ]
 }
